@@ -1,0 +1,10 @@
+# ShipGuard policy: startup (fast, light guardrails)
+rules:
+  destructive_changes: warn
+  permission_escalation: block
+  hardcoded_secrets: block
+  missing_user_story: off
+  test_coverage_min: 60
+  prod_deploy_requires_approval: false
+notify:
+  slack_webhook_env: SHIPGUARD_SLACK_URL

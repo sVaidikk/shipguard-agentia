@@ -1,0 +1,10 @@
+# ShipGuard policy: strict (everything blocks, high coverage)
+rules:
+  destructive_changes: block
+  permission_escalation: block
+  hardcoded_secrets: block
+  missing_user_story: block
+  test_coverage_min: 90
+  prod_deploy_requires_approval: true
+notify:
+  slack_webhook_env: SHIPGUARD_SLACK_URL

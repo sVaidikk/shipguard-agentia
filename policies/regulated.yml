@@ -1,0 +1,10 @@
+# ShipGuard policy: regulated (finance, health, public sector)
+rules:
+  destructive_changes: block
+  permission_escalation: block
+  hardcoded_secrets: block
+  missing_user_story: block
+  test_coverage_min: 85
+  prod_deploy_requires_approval: true
+notify:
+  slack_webhook_env: SHIPGUARD_SLACK_URL
